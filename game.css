@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Rubik+80s+Fade&display=swap');
+/* font-family: 'Michroma', sans-serif;
+font-family: 'Rubik 80s Fade', cursive; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.menu-toggle{
+    width: 30px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 17.5px;
+}
+nav ul li a:hover{
+    color: rgb(252, 0, 105);
+}
+
+/* MAIN CONTENT */
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
+    height: 600px;
+}
+
+.col-1{
+    flex-basis: 50%;
+    position: relative;
+    margin-left: 50px;
+    /* FOR THAT PINK LINE(::AFTER REPLACEMENT) */
+    /* padding-left: 22px;
+    border-width: 15px;
+    border-left-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        rgb(255, 0, 98), rgb(252, 0, 126)
+      ) 1 100%; */
+}
+.col-1 h1{
+    font-size: 45px;
+    font-family: 'Michroma', sans-serif;
+    font-weight: 2000;
+    /* font-family: 'Rubik 80s Fade', cursive; */
+}
+.col-1 h3{
+    font-size: 30px;
+    color: #707070;
+    font-weight: lighter;
+    margin: 30px 0 6px;
+}
+.col-1 p{
+    font-size: 17.5px;
+    color: #b6b6b6;
+    font-weight: 400;
+}
+.col-1 h4{
+    margin: 30px 0;
+    font-size: 22px;
+}
+/* Button */
+button{
+    width: 140px;
+    color: white;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8.5px;
+    background: linear-gradient(to right, rgb(255, 0, 98), rgb(252, 0, 126), rgb(255, 12, 146));
+    cursor: pointer;
+    transition: width 0.55s;
+}
+button img{
+    width: 40px;
+    display: none;
+}
+button:hover img{
+    display: block;
+}
+button:hover{
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px 0 15px;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+/* Pink Line */
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 54%;
+    background: linear-gradient(to bottom, #ff6062, rgb(252 0 129));
+    position: absolute;
+    left: -40px;
+    top: 25px;
+}
+
+/* Controller */
+.col-2{
+    flex-basis: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.col-2 .controller{
+    width: 85%;
+    transition: all 0.55s ease-out;
+}
+.gradient-bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 25px 0 0 25px;
+    background: linear-gradient(#ff54a2, #ff575a);
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    transform: translateX(210px);
+    transition: all 1.05s ease;
+}
+.controller:hover + .gradient-bg{
+    width: 85%;
+    transition: width 0.65s;
+}
+.controller:hover{
+    width: 95%;
+    transition: width 0.55s;
+}
+/* Add Button */
+.col-2 .add-item{
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+.col-2 .add-item img{
+    width: 70px;
+    margin-bottom: 6px;
+}
+
+/* Social Icons */
+.social-icons{
+    text-align: center;
+}
+.social-icons img{
+    height: 29px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 900px){
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#ff54a2, #ff575a);
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+        margin: 40px 0;
+    }
+    nav ul li{
+        padding-right: 42px;
+    }
+    nav ul li a{
+        display: block;
+        color: #fff;
+        margin: 10px 0;
+    }
+}
