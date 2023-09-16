@@ -13,7 +13,7 @@ font-family: 'Rubik 80s Fade', cursive; */
     width: 100%;
     min-height: 100vh;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 5%;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -34,6 +34,7 @@ font-family: 'Rubik 80s Fade', cursive; */
 .menu-toggle{
     width: 30px;
     cursor: pointer;
+    display: none;
 }
 
 nav{
@@ -43,11 +44,11 @@ nav{
 nav ul li{
     list-style: none;
     display: inline-block;
+    margin-right: 30px;
 }
 nav ul li a{
-    margin-right: 30px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-size: 17.5px;
 }
 nav ul li a:hover{
@@ -178,9 +179,10 @@ a:active { text-decoration: none; }
     cursor: pointer;
     color: white;
     font-size: 16px;
+    text-align: center;
 }
 .col-2 .add-item img{
-    width: 70px;
+    width: 55px;
     margin-bottom: 6px;
 }
 
@@ -195,7 +197,10 @@ a:active { text-decoration: none; }
 }
 
 /* MEDIA QUERY */
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 850px){
+    .menu-toggle{
+        display: block;
+    }
     nav ul{
         width: 100%;
         background: linear-gradient(#ff54a2, #ff575a);
@@ -206,11 +211,52 @@ a:active { text-decoration: none; }
         margin: 40px 0;
     }
     nav ul li{
-        padding-right: 42px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     nav ul li a{
-        display: block;
+        /* padding-right: 42px; */
         color: #fff;
-        margin: 10px 0;
+    }
+    .row{
+        flex-direction: column-reverse;
+        margin: 100px 0;
+    }
+    .col-2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .col-2 .controller{
+        width: 75%;
+    }
+    .gradient-bg{
+        transform: translateX(75px);
+    }
+    .add-item{
+        font-size: 10px;
+    }
+    .col-2 .add-item img{
+        width: 38px;
+    }
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-1 h1{
+        font-size: 35px;
+    }
+    .col-1 h3{
+        font-size: 18px;
+    }
+    .col-1 h4{
+        font-size: 13px;
+    }
+    .logo{
+        width: 90px;
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.85s;
     }
 }
